@@ -2,28 +2,18 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        //System.out.println("HurlånglinjevillDUha?");
         Scanner tb = new Scanner(System.in);
-        /*int längd = tb.nextInt();
-        ritaLinje(längd);*/
-        System.out.println("Hurbredrektangelvillduha?");
-        int bredd = tb.nextInt();
-        System.out.println("Hurlhögrektangelvillduha?");
-        int höjd =tb.nextInt();
-        ritaRektangel(bredd, höjd);
+        System.out.println("Droppa vilket tal du vill");
+        double tal = tb.nextDouble();
+        tal_positivt(tal);
+        System.out.println(tal_positivt(tal));
     }
-        static void ritaLinje(int längd)
-        {
-            for(int i=0 ; i<längd; i++){
-                System.out.print("-");
+        static boolean tal_positivt(double tal){
+            if (tal<0) {
+                return true;
             }
-        }
-        static void ritaRektangel(int bredd, int höjd){
-            for(int i=0; i<bredd; i++){
-                System.out.println();
-                for(int a=0; a<höjd; a++){
-                    System.out.print("*");
-                }
+            else{
+                return false;
             }
         }
 }
