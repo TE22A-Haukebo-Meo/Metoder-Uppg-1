@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner tb = new Scanner(System.in);
-        char tecken = 'a';
+        char tecken = '1';
         boolean svar = Character.isDigit(tecken);
         System.out.println(siffra(tecken));
         }
