@@ -3,17 +3,20 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner tb = new Scanner(System.in);
-        System.out.println("Droppa vilket tal du vill");
-        double tal = tb.nextDouble();
-        tal_positivt(tal);
-        System.out.println(tal_positivt(tal));
-    }
-        static boolean tal_positivt(double tal){
-            if (tal<0) {
+        char tecken = 'a';
+        boolean svar = Character.isDigit(tecken);
+        System.out.println(siffra(tecken));
+        }
+        static boolean siffra(char tecken){
+            boolean svar = Character.isDigit(tecken);
+            if(svar){
+                System.out.println(tecken+" är en siffra");
                 return true;
             }
             else{
+                System.out.println(tecken+" är inte en siffra");
                 return false;
             }
         }
+
 }
